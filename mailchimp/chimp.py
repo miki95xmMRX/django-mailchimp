@@ -2,8 +2,8 @@ from __future__ import unicode_literals
 
 import datetime
 
-from django.core.urlresolvers import reverse
 from django.contrib.sites.models import Site
+from django.url.resolvers import reverse
 
 from .chimpy.chimpy import Connection as BaseConnection, ChimpyException
 from .utils import wrap, build_dict, Cache, WarningLogger

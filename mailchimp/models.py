@@ -1,8 +1,8 @@
 import json
 
 from django.contrib.contenttypes.models import ContentType
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.url.resolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
 try:

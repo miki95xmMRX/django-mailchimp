@@ -4,7 +4,6 @@ import warnings
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.core.urlresolvers import reverse
 from django.core.cache import cache
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth import logout
@@ -15,6 +14,7 @@ from django.http import (
     HttpResponseBadRequest, HttpResponseNotFound, HttpResponseGone,
     HttpResponseServerError
 )
+from django.url.resolvers import reverse
 from mailchimp.settings import API_KEY, SECURE, REAL_CACHE, CACHE_TIMEOUT
 
 class KeywordArguments(dict):
