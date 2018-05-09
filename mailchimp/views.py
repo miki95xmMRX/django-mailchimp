@@ -72,6 +72,7 @@ class TestCampaignForObjectReal(ScheduleCampaignForObject):
         if obj.mailchimp_test(self.connection, self.request):
             self.message_success("A Test Campaign has been sent to your email address (%s)." % self.request.user.email)
             for message, category, filename, lineno in self.connection.warnings.get():
+                import pdb;pdb.set_trace()
                 self.message_warning("%s: %s" % (category.__name__, message))
         else:
             self.message_error("And error has occured while trying to send the test mail to you, please try again later")

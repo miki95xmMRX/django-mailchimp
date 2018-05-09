@@ -80,7 +80,7 @@ class BaseChimpObject(object):
             keys = attr.split('.')
             value = reduce(lookup, keys, info)
             setattr(self, keys[-1], value)
-
+        import pdb;pdb.set_trace()
         base = self.__class__.__name__.lower()
         self.cache = master.cache.get_child_cache(getattr(self, self.cache_key))
         self.con = master.con
@@ -90,6 +90,7 @@ class BaseChimpObject(object):
             
     def __repr__(self):
         verbose = getattr(self, self.verbose_attr).encode('utf-8')
+        import pdb;pdb.set_trace()
         return '<%s object: %s>' % (self.__class__.__name__, verbose)
 
     def __str__(self):
