@@ -93,7 +93,7 @@ class BaseChimpObject(object):
         return '<%s object: %s>' % (self.__class__.__name__, verbose)
 
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return str(self).encode('utf-8')
 
 
 class Campaign(BaseChimpObject):

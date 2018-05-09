@@ -273,7 +273,7 @@ class Connection(object):
         # enforce the 100 char limit (urlencoded!!!)
         title = settings.get('title', settings['subject_line'])
 
-        if isinstance(title, unicode):
+        if isinstance(title, str):
             title = title.encode('utf-8')
         titlelen = len(urllib.quote_plus(title))
 
@@ -282,7 +282,7 @@ class Connection(object):
             warn("cropped campaign title to fit the 100 character limit, new title: '%s'" % title, ChimpyWarning)
         subject = settings['subject_line']
 
-        if isinstance(subject, unicode):
+        if isinstance(subject, str):
             subject = subject.encode('utf-8')
         subjlen = len(urllib.quote_plus(subject))
 
