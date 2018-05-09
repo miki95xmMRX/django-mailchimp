@@ -19,6 +19,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='reciever',
             name='campaign',
-            field=models.ForeignKey(related_name='receivers', to='mailchimp.Campaign'),
+            field=models.ForeignKey(related_name='receivers', to='mailchimp.Campaign', on_delete=django.db.models.deletion.CASCADE),
         ),
     ]
