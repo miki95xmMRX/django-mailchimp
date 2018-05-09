@@ -14,7 +14,7 @@ from django.http import (
     HttpResponseBadRequest, HttpResponseNotFound, HttpResponseGone,
     HttpResponseServerError
 )
-from django.url.resolvers import reverse
+from django.urls.resolvers import reverse
 from mailchimp.settings import API_KEY, SECURE, REAL_CACHE, CACHE_TIMEOUT
 
 class KeywordArguments(dict):

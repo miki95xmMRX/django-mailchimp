@@ -2,7 +2,7 @@ import json
 
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
-from django.url.resolvers import reverse
+from django.urls.resolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
 try:

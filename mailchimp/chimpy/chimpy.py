@@ -82,7 +82,7 @@ class Connection(object):
 
         try:
             response.raise_for_status()
-        except HTTPError, e:
+        except HTTPError as e:
             message = response.json()['detail']
             raise ChimpyException(message)
         return response.json()

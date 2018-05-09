@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import datetime
 
 from django.contrib.sites.models import Site
-from django.url.resolvers import reverse
+from django.urls.resolvers import reverse
 
 from .chimpy.chimpy import Connection as BaseConnection, ChimpyException
 from .utils import wrap, build_dict, Cache, WarningLogger
@@ -116,7 +116,7 @@ class Campaign(BaseChimpObject):
         self._content = None
         self.frozen_info = info
         
-    def __unicode__(self):
+    def __str__(self):
         return self.subject
 
     @property
@@ -170,13 +170,13 @@ class Member(BaseChimpObject):
     def __init__(self, master, info):
         super(Member, self).__init__(master, info)
         
-    def __unicode__(self):
+    def __str__(self):
         return self.email
 
     def __getattr__(self, attr):
         if attr in self._extended_attrs:
             return self.info[attr]
-        raise AttributeError, attr
+        raise AttributeError(attr)
 
     @property
     def merges(self):
@@ -318,7 +318,7 @@ class List(BaseChimpObject):
     def get_merges(self):
         return self.cache.get('merges', self.master.con.list_merge_vars, self.id)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def get_member(self, email):
