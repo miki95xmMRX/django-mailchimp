@@ -39,6 +39,7 @@ class Overview(MailchimpView):
         return self.reverse('mailchimp_overview', page=page)
 
     def __qualname__(self):
+        import pdb;pdb.set_trace()
         return str(self.__class__.__name__)
 
 
