@@ -215,7 +215,6 @@ class BaseView(object):
         """
         return self.get_view_name()
 
-    @str
     def __qualname__(self):
         return self.get_view_name()
 
