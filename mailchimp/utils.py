@@ -208,15 +208,16 @@ class BaseView(object):
         self._initial_args = args
         self._initial_kwargs = kwargs
 
-    @property
-    def __name__(self):
-        """
-        INTERNAL: required by django
-        """
-        return self.get_view_name()
-
-    def __qualname__(self):
-        return self.get_view_name()
+    # @property
+    # def __name__(self):
+    #     """
+    #     INTERNAL: required by django
+    #     """
+    #     return self.get_view_name()
+    #
+    # @property
+    # def __qualname__(self):
+    #     return self.get_view_name()
 
     def __call__(self, request, *args, **kwargs):
         """
