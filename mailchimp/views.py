@@ -38,9 +38,8 @@ class Overview(MailchimpView):
     def get_page_link(self, page):
         return self.reverse('mailchimp_overview', page=page)
 
-    def __qualname__(self):
-        import pdb;pdb.set_trace()
-        return str(self.__class__.__name__)
+    import pdb;pdb.set_trace()
+
 
 
 class ScheduleCampaignForObject(MailchimpView):
