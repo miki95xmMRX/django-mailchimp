@@ -39,7 +39,7 @@ class Overview(MailchimpView):
         return self.reverse('mailchimp_overview', page=page)
 
     def __qualname__(self):
-        return str(self.__name__)
+        return str(self.__class__.__name__)
 
 
 class ScheduleCampaignForObject(MailchimpView):
