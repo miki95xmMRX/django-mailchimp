@@ -7,10 +7,10 @@ from .settings import VIEWS_OVERVIEW
 class MailchimpAdmin(admin.ModelAdmin):
 
     def get_urls(self):
-        from django.conf.urls import url
+        from django.urls import re_path
 
         urlpatterns = [
-            url(r'^$',
+            re_path(r'^$',
                 VIEWS_OVERVIEW,
                 name='mailchimp_campaign_changelist',
                 kwargs={'page':'1'}),
