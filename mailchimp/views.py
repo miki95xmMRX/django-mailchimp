@@ -24,6 +24,7 @@ class MailchimpView(MailchimpBaseView):
 
 class Overview(MailchimpView):
     template = 'mailchimp/overview.html'
+    __qualname__ = str(__name__())
 
     def handle_post(self):
         return self.not_allowed()
@@ -37,9 +38,6 @@ class Overview(MailchimpView):
 
     def get_page_link(self, page):
         return self.reverse('mailchimp_overview', page=page)
-
-    import pdb;pdb.set_trace()
-
 
 
 class ScheduleCampaignForObject(MailchimpView):
