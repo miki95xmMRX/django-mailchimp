@@ -215,6 +215,10 @@ class BaseView(object):
         """
         return self.get_view_name()
 
+    @property
+    def __qualname__(self):
+        return self.get_view_name()
+
     def __call__(self, request, *args, **kwargs):
         """
         INTERNAL: Called by django when a request should be handled by this view.

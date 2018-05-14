@@ -24,7 +24,6 @@ class MailchimpView(MailchimpBaseView):
 
 class Overview(MailchimpView):
     template = 'mailchimp/overview.html'
-    __qualname__ = str(__name__)
 
     def handle_post(self):
         return self.not_allowed()
