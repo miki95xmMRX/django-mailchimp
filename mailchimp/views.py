@@ -38,6 +38,9 @@ class Overview(MailchimpView):
     def get_page_link(self, page):
         return self.reverse('mailchimp_overview', page=page)
 
+    def __str__(self):
+        return str(self.__class__)
+
 
 class ScheduleCampaignForObject(MailchimpView):
 
